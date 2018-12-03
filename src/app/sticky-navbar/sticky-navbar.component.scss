@@ -1,0 +1,36 @@
+.navigation-bar{
+    animation: 1.7s ease-out 0s 1 slideInFromLeft;
+    width: 100%;
+    ul{
+        width: 100%;
+        margin: 1% 0;
+        padding: 0;
+        z-index: 5000;
+        li {
+            font-size: 150%;
+            display: inline-block;
+            width: 15%;
+            padding-left: 4%;
+            padding-right: 4%;
+            -webkit-transition: transform 0.2s;
+            -moz-transition: transform 0.2s;
+            -o-transition:transform 0.2s;
+            transition: transform 0.2s;
+            
+            a{
+                text-decoration: none;
+                color: white;
+                display:inline;
+            }
+
+            &:hover {
+                a {
+                    color: #00e1ff;
+                }
+                transform: scale(1.1);
+            }
+
+        }
+
+    }
+}
