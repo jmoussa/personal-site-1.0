@@ -3,8 +3,11 @@ import {trigger,
   state,
   style,
   animate,
-  transition
+  transition,
+  query,
+  stagger
 } from '@angular/animations';
+import { BlockingProxy } from 'blocking-proxy';
 
 @Component({
   selector: 'app-projects',
@@ -16,19 +19,29 @@ import {trigger,
         paddingTop: '0',
       })),
       transition('* => showDetails', [
-        animate('500ms ease-out')
+        animate('500ms ease')
       ])
     ]),
     trigger('slideIn', [
       state('in', style({
         transform: 'translateX(0)',
+        opacity: '1',
       })),
       state('out', style({
         transform: 'translateX(200%)',
       })),
       transition('* => in', [
-        style({transform: 'translateX(-200%)'}),
+        style({transform: 'translateX(-200%)', opacity: '1'}),
         animate('750ms 50ms ease-out')
+      ])
+    ]),
+    trigger('fade', [
+      transition(':enter', [
+        style({ opacity: 0}),
+        animate('750ms 750ms ease-out', style({opacity: '1'})),
+      ]),
+      transition(':leave', [
+        animate('750ms ease-out', style({opacity: '0'}))
       ])
     ])
   ],

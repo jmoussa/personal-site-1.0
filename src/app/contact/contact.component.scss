@@ -1,6 +1,35 @@
 .contact-container {
     margin: 0px;
     padding: 0px;
+    width: 100vw;
+
+    .right{
+        margin: 7% 25%;
+        color: black;
+        height: 100vh;
+        display: block;
+        width: 100%;
+        .cform {
+            width: 100%;
+            text-align: center;
+            margin: 0px;
+            padding: 0px;
+            
+            .first-group{
+                margin-top: 20%;
+            }
+
+            .form-group{
+                button {
+                    border-radius: 0px;
+                    &:hover{
+                        background-color: #0abab5;
+                    }
+                }
+            }
+        }
+    }
+    /*
     .left{
         float: left;
         background-color: rgb(236, 236, 236);
@@ -52,5 +81,5 @@
                 }
             }
         }
-    }
+    }*/
 }

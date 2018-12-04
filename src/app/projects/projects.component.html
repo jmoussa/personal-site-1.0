@@ -17,7 +17,7 @@
       </div>
       <div class='col-lg-4 col-md-12 col-sm-12 col-12'>
         <div>
-          <h3>Expense Report Web App</h3>
+          <h3>Expense Report React App</h3>
           <span>  
             <button (click)='showDetails("expense")' mat-button>Details</button>
             <button (click)='navigateToGithub("expenseReportApp")' mat-button>Github</button>
@@ -36,15 +36,48 @@
     </div>
   </div>
 
-  <div class='detail-view' [@slideIn]='selected ? "in" : "out"'>
-    <div *ngIf='openssl' class="project-detail">
-        Simple client/server message board type application with login.<br><br>Passwords are salted and hashed in the passwords.txt file.
+  <div class='detail-view'>
+    <div @fade *ngIf='openssl' class="project-detail">
+        <h4>OpenSSL Message Board</h4>  
+        <p>
+          Simple multithreaded client/server message board application with login.<br>
+          Passwords are salted and hashed in the passwords file.<br>
+          Currently runs as CLI app.<br> 
+        </p>
+        <h6>Technologies Used</h6>
+        <ul>
+          <li>Python</li>
+          <li>Sockets API</li>
+          <li>Passlib password hashing library</li>
+        </ul>
     </div>
-    <div *ngIf='expense' class="project-detail"> 
-        Personal project using React.js, Node/Express and a MySQL database to hold an individual's purchase/expense history across stores.<br><br>Good practice for building a front-end with React, and communicating with a backend and database.
+    <div @fade *ngIf='expense' class="project-detail"> 
+        <h4>Expense Report React App</h4>  
+        <p>
+          Personal project using React.js, Node/Express and a MySQL database to hold an individual's purchase/expense history across stores.<br>
+          Good practice for building a front-end with React, and communicating with a backend and database.
+        </p>
+        <h6>Technologies Used</h6>
+        <ul>
+          <li>JavaScript</li>
+          <li>React</li>
+          <li>Node.js</li>
+          <li>ExpressJS</li>
+        </ul>
     </div>
-    <div *ngIf='movie' class="project-detail">
-        Scrape theater, movie and time from IMDB using python BeautifulSoup4 library.
+    <div @fade *ngIf='movie' class="project-detail">
+        <h4>Movie Scraper</h4>  
+        <p>
+          Scrape theater, movie and time from IMDB using python BeautifulSoup4 library.<br>
+          Clean scraped data and use as REST API Endpoint.<br>
+          Initial GET request returns JSON array of all nearby movie theatres, the movies and their showtimes.
+        </p>
+        <h6>Technologies Used</h6>        
+        <ul>
+          <li>Python</li>
+          <li>BeautifulSoup4</li>
+          <li>Flask</li>
+        </ul>
     </div> 
   </div>
 </div>

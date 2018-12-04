@@ -14,7 +14,6 @@
 .projects-container {
     margin: 0 15%;
     padding: 6% 0;
-
     .header {
         text-align: center;
         width: 100%;
@@ -29,10 +28,10 @@
 
         }
     }
-    
     .container {
         width: 100%;
-        padding-top: 15%;
+        padding-top: 10%;
+
         .row {
             width: 100%;
             text-align: center;
@@ -85,7 +84,7 @@
                         transform: scale(1.02);
                         z-index: 50;
                         //background-color: #ffffff;
-                        background-color: #00e2e2;
+                        background-color: #0abab5;
                         h3 {
                             display:inline-block;
                             animation: 0.2s ease-out 0s 1 slideInFromTop;
@@ -104,8 +103,8 @@
     .detail-view {
         width: 100%;
         display:block;
-        padding: 15% 15%;
-        div {
+        padding: 5% 15%;
+        .project-detail {
             font-size: 120%;
         }
     }

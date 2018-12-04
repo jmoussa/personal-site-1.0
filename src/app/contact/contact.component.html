@@ -1,4 +1,5 @@
 <div class='contact-container row'>
+    <!--
     <div class='left d-none d-sm-none d-md-none d-lg-block col-lg-6'>
         <div class='container' (click)='resume()'>
             <h3><button class='resume-button'>resume</button></h3>
@@ -25,4 +26,26 @@
             </div>
         </div>
     </div> 
+-->
+    <div class='right'>
+        <div class='cform'>
+            <h1>Contact</h1>
+            <h3>Have a question or want to work togther?</h3> 
+
+            <div class="form-group first-group">
+                <mat-form-field class='col-9'>
+                    <input matInput placeholder="Email" value="" [formControl]='email'>
+                </mat-form-field>
+                <mat-form-field class='col-9'>
+                    <input matInput placeholder="Your Name" value="" [formControl]='subject'>
+                </mat-form-field>
+                <mat-form-field class='col-9'>
+                    <textarea matInput rows='5' placeholder="Your Message" [formControl]='body'></textarea>
+                </mat-form-field>    
+            </div>
+            <div class="form-group">
+                <button (click)="sendEmail()"  mat-stroked-button color='asset'>Send</button>
+            </div>
+        </div>
+    </div>
 </div>
