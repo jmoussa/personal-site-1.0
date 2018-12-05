@@ -1,7 +1,7 @@
 <div class='projects-container'>
   <div class="header">
-    <h1>Projects</h1>
-    <div class="bar"></div>
+    <h1 @slide *ngIf='inView' class='heading'>Projects</h1>
+    <div @slideOpposite *ngIf='inView' class="bar"></div>
   </div>
   
   <div class='container' [@slideUp]='selected ? "showDetails" : "hideDetails"'>
@@ -17,7 +17,7 @@
       </div>
       <div class='col-lg-4 col-md-12 col-sm-12 col-12'>
         <div>
-          <h3>Expense Report React App</h3>
+          <h3>Expense Report Web App</h3>
           <span>  
             <button (click)='showDetails("expense")' mat-button>Details</button>
             <button (click)='navigateToGithub("expenseReportApp")' mat-button>Github</button>
@@ -36,8 +36,8 @@
     </div>
   </div>
 
-  <div class='detail-view'>
-    <div @fade *ngIf='openssl' class="project-detail">
+  <div class='detail-view' style='position:relative;'>
+    <div @slide *ngIf='openssl' class="project-detail" style='position:absolute; top:25%; left:15%; right:15%;'>
         <h4>OpenSSL Message Board</h4>  
         <p>
           Simple multithreaded client/server message board application with login.<br>
@@ -51,8 +51,8 @@
           <li>Passlib password hashing library</li>
         </ul>
     </div>
-    <div @fade *ngIf='expense' class="project-detail"> 
-        <h4>Expense Report React App</h4>  
+    <div @slide *ngIf='expense' class="project-detail" style='position:absolute; top:25%; left:15%; right:15%;'> 
+        <h4>Expense Report Web App</h4>  
         <p>
           Personal project using React.js, Node/Express and a MySQL database to hold an individual's purchase/expense history across stores.<br>
           Good practice for building a front-end with React, and communicating with a backend and database.
@@ -65,7 +65,7 @@
           <li>ExpressJS</li>
         </ul>
     </div>
-    <div @fade *ngIf='movie' class="project-detail">
+    <div @slide *ngIf='movie' class="project-detail" style='position:absolute; top:25%; left:15%; right:15%;'>
         <h4>Movie Scraper</h4>  
         <p>
           Scrape theater, movie and time from IMDB using python BeautifulSoup4 library.<br>

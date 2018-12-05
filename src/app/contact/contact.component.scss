@@ -2,13 +2,15 @@
     margin: 0px;
     padding: 0px;
     width: 100vw;
+    height: 100vh;
 
-    .right{
-        margin: 7% 25%;
+    .main{
+        margin: 0 25%;
         color: black;
-        height: 100vh;
+        height: 85%;
         display: block;
         width: 100%;
+        padding-top: 7%;
         .cform {
             width: 100%;
             text-align: center;
@@ -25,6 +27,31 @@
                     &:hover{
                         background-color: #0abab5;
                     }
+                }
+            }
+        }
+    }
+    .footer {
+        display: block;
+        width: 100%;
+        height: 15%;
+        background-color: #0abab5;
+        .links {
+            margin: 1% 15%;
+            display: inline-block;
+            .resume-button {
+                background: none;
+                color: inherit;
+                border: none;
+                padding: 1% 5%;
+                font: inherit;
+                cursor: pointer;
+                outline: inherit;
+                transition-duration: 250ms;
+                transition-property: transform;
+                &:hover{
+                    text-decoration: underline;
+                    transform: scale(1.05);
                 }
             }
         }

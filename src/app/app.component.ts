@@ -13,7 +13,7 @@ export class AppComponent implements AfterContentInit {
   hgt: String;
 
   constructor(@Inject(DOCUMENT) document) {
-    this.originalPosition = 600;
+    this.originalPosition = 0;
   }
 
   ngAfterContentInit() {

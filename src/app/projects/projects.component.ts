@@ -22,28 +22,24 @@ import { BlockingProxy } from 'blocking-proxy';
         animate('500ms ease')
       ])
     ]),
-    trigger('slideIn', [
-      state('in', style({
-        transform: 'translateX(0)',
-        opacity: '1',
-      })),
-      state('out', style({
-        transform: 'translateX(200%)',
-      })),
-      transition('* => in', [
-        style({transform: 'translateX(-200%)', opacity: '1'}),
-        animate('750ms 50ms ease-out')
-      ])
-    ]),
-    trigger('fade', [
+    trigger('slide', [
       transition(':enter', [
-        style({ opacity: 0}),
-        animate('750ms 750ms ease-out', style({opacity: '1'})),
+        style({ opacity: 0, transform: 'translateX(-200%)'}),
+        animate('500ms 500ms  ease-out', style({opacity: '1', transform: 'translateX(0)'})),
       ]),
       transition(':leave', [
-        animate('750ms ease-out', style({opacity: '0'}))
+        animate('500ms ease-out', style({opacity: '0',  transform: 'translateX(200%)'}))
       ])
-    ])
+    ]),
+    trigger('slideOpposite', [
+      transition(':enter', [
+        style({ opacity: 0, transform: 'translateX(200%)'}),
+        animate('500ms 500ms  ease-out', style({opacity: '1', transform: 'translateX(0)'})),
+      ]),
+      transition(':leave', [
+        animate('500ms ease-out', style({opacity: '0',  transform: 'translateX(-200%)'}))
+      ])
+    ]),
   ],
 })
 export class ProjectsComponent implements OnInit {
@@ -53,9 +49,10 @@ export class ProjectsComponent implements OnInit {
   expense: boolean;
   movie: boolean;
   selected: boolean;
+  inView: boolean;
 
   navigateToGithub(s: String) {
-    console.log( s );
+    // console.log( s );
     window.open('https://github.com/jmoussa/' + s, '_blank');
   }
 
@@ -66,6 +63,7 @@ export class ProjectsComponent implements OnInit {
     this.expense = false;
     this.movie = false;
     this.selected = false;
+    this.inView = true;
   }
 
   showDetails(choice: String) {

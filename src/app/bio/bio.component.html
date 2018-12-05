@@ -1,7 +1,7 @@
 <div id='main'>
 	<div class="header">
-    <h1>About Me</h1>
-    <div class="bar"></div>
+    <h1 @slide *ngIf='inView' >About Me</h1>
+    <div @slideOpposite *ngIf='inView' class="bar"></div>
   </div>
   <div class='container'>
     <ul class='row'>

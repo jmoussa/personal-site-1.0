@@ -17,9 +17,17 @@ export class ContactComponent implements OnInit {
 
   sendEmail() {
     console.log('EMAIL ' + this.email.value + '\nBODY ' + this.body.value);
+    const valid = this.validate(this.email.value, this.body.value, this.name.value);
+    if (valid) {
+      console.log('SEND EMAIL to BACKEND');
+    }
   }
   constructor() { }
 
+  validate(email: String, body: String, name: String) {
+    console.log('CHECK EMAIL AND BODY FOR XSS');
+    return true;
+  }
   ngOnInit() {
   }
 

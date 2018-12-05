@@ -26,20 +26,19 @@
             </div>
         </div>
     </div> 
--->
-    <div class='right'>
+    -->
+    <div class='main'>
         <div class='cform'>
             <h1>Contact</h1>
-            <h3>Have a question or want to work togther?</h3> 
-
+            <h3>Have a question or want to collaborate?</h3> 
             <div class="form-group first-group">
-                <mat-form-field class='col-9'>
+                <mat-form-field class='col-12 col-sm-12 col-md-12 col-lg-7'>
                     <input matInput placeholder="Email" value="" [formControl]='email'>
                 </mat-form-field>
-                <mat-form-field class='col-9'>
+                <mat-form-field class='col-12 col-sm-12 col-md-12 col-lg-7'>
                     <input matInput placeholder="Your Name" value="" [formControl]='subject'>
                 </mat-form-field>
-                <mat-form-field class='col-9'>
+                <mat-form-field class='col-12 col-sm-12 col-md-12 col-lg-7'>
                     <textarea matInput rows='5' placeholder="Your Message" [formControl]='body'></textarea>
                 </mat-form-field>    
             </div>
@@ -47,5 +46,11 @@
                 <button (click)="sendEmail()"  mat-stroked-button color='asset'>Send</button>
             </div>
         </div>
+    </div>
+
+    <div class='footer'>
+        <div class='links'>
+            <h3 (click)='resume()'><button class='resume-button'>resume</button></h3>
+        </div>       
     </div>
 </div>
