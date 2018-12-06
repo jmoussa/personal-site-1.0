@@ -1,5 +1,6 @@
 import { Component, HostListener, Inject, AfterContentInit} from '@angular/core';
 import { DOCUMENT } from '@angular/common';
+import * as $ from 'jquery';
 
 @Component({
   selector: 'app-root',
@@ -10,7 +11,7 @@ import { DOCUMENT } from '@angular/common';
 export class AppComponent implements AfterContentInit {
 
   originalPosition: number;
-  hgt: String;
+  hgt: number;
 
   constructor(@Inject(DOCUMENT) document) {
     this.originalPosition = 0;
@@ -18,19 +19,19 @@ export class AppComponent implements AfterContentInit {
 
   ngAfterContentInit() {
     this.originalPosition = document.getElementById('navbar').offsetTop;
-    this.hgt = document.getElementById('navbar').style.height;
+    this.hgt = $('#myNavbar').height();
+    console.log('INITIAL HEIGHT: ' + this.hgt);
   }
 
   @HostListener('window:scroll', ['$event'])
 
   onWindowScroll(e) {
-    const sticky = this.originalPosition - +this.hgt;
+    const sticky = this.originalPosition - (+this.hgt);
+    const element = document.getElementById('navbar');
 
-    if (window.pageYOffset >= sticky) {
-      const element = document.getElementById('navbar');
+    if (window.pageYOffset > sticky) {
       element.classList.add('sticky');
     } else {
-      const element = document.getElementById('navbar');
       element.classList.remove('sticky');
     }
   }
