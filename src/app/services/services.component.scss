@@ -9,13 +9,16 @@
     .left{
         float: left;
         height: 100vh;
+        min-height: 850px;
         width: 50%;
         padding-top: 7%;
-        ul {
+        padding-left: 10%;
+
+        .services-list {
             margin: 0px;
             padding:0px;
             list-style: none;
-            li{
+            .service-item {
                 margin:0px;
                 padding:0px;
                 div {
@@ -25,6 +28,7 @@
                     -moz-transition: transform 0.2s;
                     -o-transition: transform 0.2s;
                     transition: transform 0.2s;
+                    
                     &:hover {
                         h2{
                             -webkit-transition: transform 0.2s;

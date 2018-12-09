@@ -20,7 +20,6 @@ export class AppComponent implements AfterContentInit {
   ngAfterContentInit() {
     this.originalPosition = document.getElementById('navbar').offsetTop;
     this.hgt = $('#myNavbar').height();
-    console.log('INITIAL HEIGHT: ' + this.hgt);
   }
 
   @HostListener('window:scroll', ['$event'])
@@ -35,4 +34,5 @@ export class AppComponent implements AfterContentInit {
       element.classList.remove('sticky');
     }
   }
+
 }

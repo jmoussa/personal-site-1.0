@@ -11,6 +11,7 @@
 	//Improve aliasing on mobile/tablet devices
     box-shadow: 0 0 1px rgba(0, 0, 0, 0);
 }
+
 .projects-container {
     margin: 0 15%;
     padding: 6% 0;
@@ -18,7 +19,7 @@
         text-align: center;
         width: 100%;
         height: 10vh;
-        margin-bottom: 3vh;
+        min-height: 33px;
         display: block;
         .bar {
             margin: 1% auto;
@@ -28,10 +29,9 @@
 
         }
     }
-    .container {
+    .project-container {
         width: 100%;
         padding-top: 10%;
-
         .row {
             width: 100%;
             text-align: center;
@@ -41,32 +41,70 @@
             div{
                 height:100%;
                 list-style: none;
+
+                #message{
+                    background: url('../../assets/images/openssl.jpg'); 
+                    &:hover {
+                        background: #0abab5;
+                    }
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                }
+                #expense{
+                    background: url('../../assets/images/expense.jpg');
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    &:hover {
+                        background: rgb(10, 186, 181);
+                    }
+                }
+                #movie{
+                    background: url('../../assets/images/movieScraper.jpg');
+                    &:hover {
+                        background: hsl(178, 90%, 38%);
+                    }
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                }
                 div {
                     overflow: hidden;
                     width:100%;
-                    height:25vh;
+                    @media screen and (max-width:991px){
+                        height:13vh;
+                    }
+                    @media screen and (min-width:992px){
+                        height:25vh;
+                    }
+                    min-height:170px;
                     text-align: center;
-                    background-color:grey;
+                    background:grey;
+                    filter: blur(0.5px);
                     margin: 3px 0;
                     h3 {
                         overflow: hidden;
-                        height: 30%;
+                        height: 50%;
                         margin-top: 10%;
                         text-align: center;
                         display: none;
                         transition: translateX(-200%);
+                        @media screen and (max-width:991px){
+                            margin: 0px;
+                            padding-top: 5%;
+                        }
                     }
-                    
                     span {
                         overflow: hidden;
-                        height: 30%;
+                        height: 50%;
                         width: 100%;
-                        padding: 5px;
-                        margin-top: 10%;
                         transition: translateX(-200%);
                         display: none;
+                        @media screen and (max-width:991px){
+                            margin-bottom: 50%;
+                            height: 60%;
+                        }
                         button {
                             border-radius: 0px;
+                            margin: 3%;
                             &:hover{
                                 background-color: #0abab5;
                             }
@@ -74,7 +112,7 @@
                     }
 
                     transition-duration: 250ms;
-                    transition-property: display, transform, background-color;
+                    transition-property: display, transform, opacity, background-color;
                 
                     @include hideTapHighlightColor();
                     @include hardwareAccel();
@@ -83,8 +121,9 @@
                     &:hover{
                         transform: scale(1.02);
                         z-index: 50;
-                        //background-color: #ffffff;
-                        background-color: #0abab5;
+                        background: #0abab5;
+                        opacity: 1;
+                        filter: blur(0);
                         h3 {
                             display:inline-block;
                             animation: 0.2s ease-out 0s 1 slideInFromTop;
@@ -106,6 +145,9 @@
         padding: 5% 15%;
         .project-detail {
             font-size: 120%;
+            @media screen and (max-width:991px){
+                font-size: 100%;
+            }
         }
     }
 }

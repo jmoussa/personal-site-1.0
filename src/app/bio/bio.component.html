@@ -1,28 +1,24 @@
 <div id='main'>
 	<div class="header">
-    <h1 @slide *ngIf='inView' >About Me</h1>
+    <h1 @slide *ngIf='inView' >Bio</h1>
     <div @slideOpposite *ngIf='inView' class="bar"></div>
   </div>
-  <div class='container'>
-    <ul class='row'>
-      <li class='d-sm-none d-md-inline-block col-lg-3 col-md-6'>
-        <div>
-        </div>
-        <h5>Tailored</h5>
+  <div class='container d-none d-md-inline-block'>
+    <ul @staggerGrow *ngIf='iconView || graphView' class='row'>
+      <li class='d-none d-sm-none d-md-inline-block col-lg-3 col-md-6'>
+				<img src='../../assets/images/tailored.png' alt='tailored' width="175px" height="125px"/>
+				<h5>Tailored</h5>
       </li>
-      <li class='d-sm-none d-md-inline-block col-lg-3 col-md-6'>
-        <div>
-        </div>
+      <li class='d-none d-sm-none d-md-inline-block col-lg-3 col-md-6'>
+				<img src='../../assets/images/dynamic.png' alt='dynamic' width="175px" height="125px"/>
         <h5>Dynamic</h5>
       </li>
-      <li class='d-sm-none d-md-inline-block col-lg-3 col-md-6'>
-        <div>
-        </div>
+      <li class='d-none d-sm-none d-md-inline-block col-lg-3 col-md-6'>
+				<img src='../../assets/images/pixelperfect.png' alt='pixel perfect' width="175px" height="125px"/>
         <h5>Pixel Perfect</h5>
       </li>
-      <li class='d-sm-none d-md-inline-block col-lg-3 col-md-6'>
-        <div>
-        </div>
+      <li class='d-none d-sm-none d-md-inline-block col-lg-3 col-md-6'>
+				<img src='../../assets/images/user.png' alt='user driven' width="175px" height="125px"/>
         <h5>User Driven</h5>
       </li>
     </ul>
@@ -33,7 +29,7 @@
 				<img src="../../assets/images/fullsizeoutput_aba.jpg" alt="headshot" width='120' height="150">
 			</div>
 			<div>
-				<h2>Who am I?</h2>
+				<h2>About Me</h2>
 				Currently a Salesforce Developer at <a href='https://www.internetcreations.com/s/'>Internet Creations</a>,
 				I work with clients and service all their development needs.
 				I'm a full-stack web developer with an emphasis on simple, functional, yet sophisticated design.
@@ -42,7 +38,7 @@
 
 		<div class="chart-container col-md-6 col-sm-12 col-12">
 			<div class="chart chart--dev">
-				<ul class="chart--horiz">
+				<ul @staggerSlide *ngIf='graphView' class="chart--horiz">
 					<li class="chart__bar">
 						<div class='chart_percent' style="width: 80%;">
 							<div class="label__holder">

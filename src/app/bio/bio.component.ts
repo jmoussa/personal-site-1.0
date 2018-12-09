@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { trigger, style, animate, transition } from '@angular/animations';
+import { Component, OnInit, AfterContentChecked } from '@angular/core';
+import { trigger, state, style, animate, stagger, query, transition } from '@angular/animations';
 import * as $ from 'jquery';
 
 @Component({
@@ -25,21 +25,41 @@ import * as $ from 'jquery';
         animate('500ms ease-out', style({opacity: '0',  transform: 'translateX(-200%)'}))
       ])
     ]),
+    trigger('staggerGrow', [
+      transition(':enter', [
+        query('li', [
+          style({opacity: '0', transform: 'scale(0)'}),
+          stagger('250ms', [
+            animate('300ms ease-out', style({opacity: '1', transform: 'scale(1)'})),
+          ]),
+        ])
+      ])
+    ]),
+    trigger('staggerSlide', [
+      transition(':enter', [
+        query('.chart_percent', [
+          style({opacity: '0', transform: 'translateX(-200%)'}),
+          stagger('100ms', [
+            animate('300ms ease-out', style({opacity: '1', transform: 'translateX(0)'})),
+          ]),
+        ])
+      ])
+    ]),
   ]
 })
 
 export class BioComponent implements OnInit {
 
   inView: boolean;
+  iconView: boolean;
+  graphView: boolean;
 
   constructor() { }
   isInViewport (el) {
     const rect = el.getBoundingClientRect();
     return (
-      rect.top >= 0 &&
-      rect.left >= 0 &&
-      rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) && /*or $(window).height() */
-      rect.right <= (window.innerWidth || document.documentElement.clientWidth) /*or $(window).width() */
+      rect.top >= 0 && rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) && /*or $(window).height() */
+      rect.left >= 0 && rect.right <= (window.innerWidth || document.documentElement.clientWidth) /*or $(window).width() */
     );
   }
   isInView(el, callback) {
@@ -54,11 +74,23 @@ export class BioComponent implements OnInit {
       }
     });
   }
+
   ngOnInit() {
     this.inView = false;
-    const handler = this.isInView(document.querySelector('.header'), () => {
+    this.iconView = false;
+    this.graphView = false;
+
+    const headerHandler = this.isInView(document.querySelector('.header'), () => {
       this.inView = true;
     });
-    $(window).on('DOMContentLoaded load resize scroll', handler);
+    const iconHandler = this.isInView(document.querySelector('.container'), () => {
+      this.iconView = true;
+    });
+    const graphHandler = this.isInView(document.querySelector('.chart'), () => {
+      this.graphView = true;
+    });
+    $(window).on('DOMContentLoaded load resize scroll', headerHandler);
+    $(window).on('DOMContentLoaded load resize scroll', iconHandler);
+    $(window).on('DOMContentLoaded load resize scroll', graphHandler);
   }
 }

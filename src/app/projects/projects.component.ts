@@ -40,6 +40,16 @@ import * as $ from 'jquery';
         animate('500ms ease-out', style({opacity: '0',  transform: 'translateX(-200%)'}))
       ])
     ]),
+    trigger('staggerGrow', [
+      transition(':enter', [
+        query('.cards', [
+          style({opacity: '0', transform: 'scale(0)'}),
+          stagger('100ms', [
+            animate('500ms ease-out', style({opacity: '1', transform: 'scale(1)'})),
+          ]),
+        ])
+      ])
+    ]),
   ],
 })
 export class ProjectsComponent implements OnInit {
@@ -50,6 +60,7 @@ export class ProjectsComponent implements OnInit {
   movie: boolean;
   selected: boolean;
   inView: boolean;
+  projectView: boolean;
 
   navigateToGithub(s: String) {
     // console.log( s );
@@ -84,11 +95,17 @@ export class ProjectsComponent implements OnInit {
     this.movie = false;
     this.selected = false;
     this.inView = false;
+    this.projectView = false;
 
     const handler = this.isInView(document.querySelector('.project-header'), () => {
       this.inView = true;
       console.log('ELEMENT IN VIEW!');
     });
+    const projectHandler = this.isInView(document.querySelector('.project-container'), () => {
+      this.projectView = true;
+    });
+
+    $(window).on('DOMContentLoaded load resize scroll', projectHandler);
     $(window).on('DOMContentLoaded load resize scroll', handler);
   }
 

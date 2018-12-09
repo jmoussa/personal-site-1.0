@@ -3,6 +3,8 @@
     padding: 0px;
     width: 100vw;
     height: 100vh;
+    min-height: 850px;
+    position: relative;
 
     .main{
         margin: 0 25%;
@@ -16,9 +18,41 @@
             text-align: center;
             margin: 0px;
             padding: 0px;
-            
-            .first-group{
-                margin-top: 20%;
+            .contact-header {
+                text-align: center;
+                width: 100%;
+                height: 10vh;
+                margin-bottom: 3vh;
+                display: block;
+                .bar {
+                    margin: 1% auto;
+                    background-color: black;
+                    width: 7%;
+                    height: 5%;
+
+                }
+            }
+
+            .contact-statement {
+                padding: 3% 0;
+                h6 {
+                    padding: 3% 10%;
+                }
+            }
+
+            .contact-button{
+                margin: 10% 0;
+
+                a{
+                    text-decoration: none;
+                    color: black;
+                    padding: 2% 5%;
+                    border: 2px solid #0abab5;
+
+                    &:hover {
+                        background-color: #0abab5;
+                    }
+                }
             }
 
             .form-group{
@@ -31,82 +65,108 @@
             }
         }
     }
+
+    .contact-footer {
+        width: 100%;
+        text-align: center;
+        background-color: #0abab5;
+        height: 75px;
+        margin: auto;
+        padding: 0;
+        display:flex;
+        position: absolute;
+        bottom: 0px;
+        div{
+            display: flex;
+            margin: auto;
+        }
+    }
+
+
+
     .footer {
         display: block;
-        width: 100%;
-        height: 15%;
-        background-color: #0abab5;
+         @media screen and (max-width: 760px){
+            width: 10%;
+        }
+        @media screen and (min-width: 761px){
+            width: 7.5%;
+        }
+
+        text-align: center;
+        position: fixed;
+        bottom: 0px;
+        height: 300px;
+
+        .line {
+            background-color: #0abab5;
+            width: 1.5%;
+            padding: 0px;
+            margin-left: 49.25%;
+            margin-right: 49.25%;
+            margin-top: 15%;
+            height: 100%;
+        }
         .links {
-            margin: 1% 15%;
-            display: inline-block;
-            .resume-button {
-                background: none;
-                color: inherit;
-                border: none;
-                padding: 1% 5%;
-                font: inherit;
-                cursor: pointer;
-                outline: inherit;
-                transition-duration: 250ms;
-                transition-property: transform;
-                &:hover{
-                    text-decoration: underline;
-                    transform: scale(1.05);
-                }
-            }
-        }
-    }
-    /*
-    .left{
-        float: left;
-        background-color: rgb(236, 236, 236);
-        height: 100vh;
-        width: 50%;
-        div {
-            margin: 15% 15%;
-            .resume-button {
-                background: none;
-                color: inherit;
-                border: none;
-                padding: 1% 5%;
-                font: inherit;
-                cursor: pointer;
-                outline: inherit;
-                transition-duration: 250ms;
-                transition-property: transform;
-                &:hover{
-                    text-decoration: underline;
-                    transform: scale(1.05);
-                }
-            }
-        }
-        
-    }
 
-    .right{
-        float: right;
-        color: black;
-        height: 100vh;
-        width: 50%;
-
-        .cform {
+            margin: 0;
+            display: block;
             width: 100%;
             text-align: center;
-            margin: 0px;
-            padding: 15% 15%;
             
-            .first-group{
-                margin-top: 20%;
+            div {
+                margin: auto;
+                margin-top: 10%;
+                max-width: 100%;
+
+                padding: 1%;
+                
+                height: auto;
+                display: block;
+                text-align:center;
+                
+                p{
+                    padding: 0;
+                    margin: auto;
+                    cursor: pointer; 
+                    .resume-button{
+                        background: none;
+                        color: inherit;
+                        border: none;
+                        padding: 1% 5%;
+                        font: inherit;
+                        cursor: pointer;
+                        outline: inherit;
+
+                        cursor: pointer; 
+                        transition-duration: 250ms;
+                        transition-property: transform;
+                        &:hover{
+                            transform: scale(1.20);
+                        }
+                    }
+                }                
+
+
+                a {
+                    padding: 0;
+                    margin: auto;
+                    img{
+                        padding: 0;
+                        margin: 0;
+                        width: 25px;
+                        height: 25px;
+                        transition-duration: 250ms;
+                        transition-property: transform;
+                        &:hover{
+                            transform: scale(1.20);
+                        }
+                    }
+
+                }
+
             }
 
-            .form-group{
-                button {
-                    border-radius: 0px;
-                    &:hover{
-                        background-color: #00e2e2;
-                    }
-                }
-            }
         }
-    }*/
+    }
 }
