@@ -112,15 +112,14 @@
             height: 100%;
         }
         .links {
-
             margin: 0;
             display: block;
             width: 100%;
             text-align: center;
-            
             div {
                 margin: auto;
                 margin-top: 10%;
+                width: 100%;
                 max-width: 100%;
 
                 padding: 1%;
@@ -129,32 +128,25 @@
                 display: block;
                 text-align:center;
                 
-                p{
-                    padding: 0;
-                    margin: auto;
-                    cursor: pointer; 
-                    .resume-button{
-                        background: none;
-                        color: inherit;
-                        border: none;
-                        padding: 1% 5%;
-                        font: inherit;
-                        cursor: pointer;
-                        outline: inherit;
-
-                        cursor: pointer; 
-                        transition-duration: 250ms;
-                        transition-property: transform;
-                        &:hover{
-                            transform: scale(1.20);
-                        }
-                    }
-                }                
-
-
                 a {
                     padding: 0;
                     margin: auto;
+                    position: relative;
+                    text-decoration: none;
+                    color: black; 
+                    .label {
+                        margin: 0px;
+                        padding: 0px;
+                        width: 0px;
+                        position:absolute;
+                        right:0;
+                        bottom:0;
+                        left:0px;
+                        opacity:0;
+                        text-decoration: none;
+                        text-align: left;
+                    }
+
                     img{
                         padding: 0;
                         margin: 0;
@@ -162,12 +154,25 @@
                         height: 25px;
                         transition-duration: 250ms;
                         transition-property: transform;
-                        &:hover{
-                            transform: scale(1.20);
-                        }
                     }
 
                 }
+
+                &:hover{
+                    transform: scale(1.20);
+                    a{
+                        .label {
+                            -webkit-transition: 0.2s ease-out;
+                            -moz-transition: 0.2s ease-out;
+                            -o-transition: 0.2s ease-out;
+                            transition: 0.2s ease-out;
+                            left: 30px;
+                            opacity: 1;
+                        }
+                    }
+                            
+                }
+
 
             }
 
