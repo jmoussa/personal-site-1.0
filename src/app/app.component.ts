@@ -17,6 +17,9 @@ export class AppComponent implements AfterContentInit {
     this.originalPosition = 0;
   }
 
+  goToHome() {
+    location.href = location.href.replace( /#.*/, '#home');
+  }
   ngAfterContentInit() {
     this.originalPosition = document.getElementById('navbar').offsetTop;
     this.hgt = $('#myNavbar').height();

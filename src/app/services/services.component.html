@@ -1,45 +1,71 @@
-<div class='services-container row'>
-  <div class='left p-none col-12 col-sm-12 col-md-12 col-lg-6'>
-    <ul class='services-list'>
-      <li class='service-item'>
-        <div (mouseenter)='onClick("research")'>
-          <h2>UI/UX Design</h2>
-          <div *ngIf='research' (click)='onClick("research")' class='service-details d-lg-none d-md-block d-sm-block d-block'>
-            UI/UX design involves planning the layout and structure of your website. 
-            How it will look on mobile. How the user will interact with various components etc.
-            Once that is decided, I generate a mockup (blueprint) of the site.
-          </div>
+<div class='services-container'>
+  <div class="services-header">
+    <h1 @slide *ngIf='inView' class='heading'>Services</h1>
+    <div @slideOpposite *ngIf='inView' class="bar"></div>
+  </div>
+  
+  <div class='service-list'>
+    <ul @staggerSlide @staggerSlide2 *ngIf='serviceView' class='services'>
+      <li class='service'>
+        <div class='image-container'>
+          <img src="../../assets/images/design.svg" alt="Design" title='Design'>
         </div>
-      </li>
-      <li class='service-item'>
-        <div (mouseenter)='onClick("structure")'>
-          <h2>Front End Development</h2>
-          <div *ngIf='structure' class='service-details d-lg-none d-md-block d-sm-block d-block'>
-            The front end is what the user will see and interact with. 
-            This involves building out the display (ideally so that it matches the mockup).
-            I focus on dynamic, interactive and intuitive web interfaces.
-          </div>
+        <div class='content-container' id='design'>
+          <h4>UI/UX Design</h4>
+          <div>
+            <p>
+              UI/UX design involves planning the layout and structure of your website. 
+              How it will look on mobile. How the user will interact with various components etc.
+              Once that is decided, I generate a mockup (blueprint) of the site, usually on paper then with Adobe XD.
+            </p>
         </div>
+        </div>  
       </li>
-      <li class='service-item'>
-        <div (mouseenter)='onClick("strategy")'>
-          <h2>Back End Development</h2>
-          <div *ngIf='strategy' class='service-details d-lg-none d-md-block d-sm-block d-block'>
-            The back end is where all the logic that connects to your business or brand will go.
-            Sometimes this is not necessary (for example this site does not have a backend).
-            You will require a back end if your site integrates with:
-            <ul>
+      <li class='service odd'>
+        <div class='image-container'>
+          <img src="../../assets/images/frontend.svg" alt="frontend" title='frontend'>
+        </div>
+        <div class='content-container' id='frontend'>
+          <h4>Front End Development</h4>
+          <div>
+            <p>
+              The front end is what the user will see and interact with. 
+              This involves building out the display (ideally so that it matches the mockup).
+              I focus on dynamic, interactive and intuitive web interfaces.
+              I also pride myself on making sure all my sites are mobile ready or 'responsive'.
+            </p>
+          </div>
+        </div>        
+      </li>
+      <li class='service'>
+        <div class='image-container'>
+          <img src="../../assets/images/backend.svg" alt="backend" title='backend'>
+        </div>
+        <div class='content-container' id='backend'>
+          <h4>Back End Development</h4>
+          <div>
+            <p>
+              The back end is where all the logic that connects to your business or brand will go.
+              Sometimes this is not necessary though, if all you want is to display static information for example.
+              You will require a back end if your site integrates with:
+            </p>
+          <ul>
               <li>A Database (or anywhere you store your electronic records)</li>
-              <li>3rd Party Service (e.g. Google Maps, Twitter Feed, Email/Messaging)</li>
+              <li>3rd Party Service (Google Maps, Email Service, etc.)</li>
               <li>Another CMS</li>
             </ul>
           </div>
-        </div>
+        </div>        
       </li>
-      <li class='service-item'>
-        <div (mouseenter)='onClick("dev")'>
-          <h2>Database Services</h2>
-          <div *ngIf='dev' class='service-details d-lg-none d-md-block d-sm-block d-block'>
+      <li class='service odd'>
+        <div class='image-container'>
+          <img src="../../assets/images/database.svg" alt="database" title='database'>
+        </div>
+        <div class='content-container' id='database'>
+          <h4>Database Services</h4>
+          <div>
+            The database is what will store all of your information in bulk.
+            It's another optional feature and not always necessary depending on the site's desired functionality.
             My database services include:
             <ul>
               <li>Building a database from Scratch</li>
@@ -47,40 +73,10 @@
               <li>Connecting and integrating a database with the back end</li>
             </ul>
           </div>
-        </div>
-      </li>
+        </div>        
+    </li>
     </ul>
   </div>
-
-  <div class="right d-none d-sm-none d-md-none d-lg-block col-lg-6">
-    <div *ngIf='research' (click)='onClick("research")' class='service-details'>
-      UI/UX design involves planning the layout and structure of your website. 
-      How it will look on mobile. How the user will interact with various components etc.
-      Once that is decided, I generate a mockup (blueprint) of the site.
-    </div>
-    <div *ngIf='structure' class='service-details'>
-      The front end is what the user will see and interact with. 
-      This involves building out the display (ideally so that it matches the mockup).
-      I focus on dynamic, interactive and intuitive web interfaces.
-    </div>
-    <div *ngIf='strategy' class='service-details'>
-      The back end is where all the logic that connects to your business or brand will go.
-      Sometimes this is not necessary (for example this site does not have a backend).
-      You will require a back end if your site integrates with:
-      <ul>
-        <li>A Database (or anywhere you store your electronic records)</li>
-        <li>3rd Party Service (e.g. Google Maps, Twitter Feed, Email/Messaging)</li>
-        <li>Another CMS</li>
-      </ul>
-    </div>
-    <div *ngIf='dev' class='service-details'>
-      My database services include:
-      <ul>
-        <li>Building a database from Scratch</li>
-        <li>Database Migration</li>
-        <li>Connecting and integrating a database with the back end</li>
-      </ul>
-    </div>
-  </div>
+ 
 
 </div>

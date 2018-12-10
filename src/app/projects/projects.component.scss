@@ -19,14 +19,13 @@
         text-align: center;
         width: 100%;
         height: 10vh;
-        min-height: 33px;
+        min-height: 90px;
         display: block;
         .bar {
             margin: 1% auto;
             background-color: black;
-            width: 7%;
+            width: 50px;
             height: 5%;
-
         }
     }
     .project-container {
@@ -41,41 +40,48 @@
             div{
                 height:100%;
                 list-style: none;
-
                 #message{
                     background: url('../../assets/images/openssl.jpg'); 
-                    &:hover {
-                        background: #0abab5;
-                    }
                     background-repeat: no-repeat;
                     background-size: cover;
+                    // box-shadow: 3px 3px 10px #888888;
+                    &:hover {
+                        background: #0abab5;
+                        box-shadow: none;
+                    }
                 }
                 #expense{
                     background: url('../../assets/images/expense.jpg');
                     background-repeat: no-repeat;
                     background-size: cover;
+                    // box-shadow: 3px 3px 10px #888888;
                     &:hover {
                         background: rgb(10, 186, 181);
+                        box-shadow: none;
                     }
                 }
                 #movie{
                     background: url('../../assets/images/movieScraper.jpg');
-                    &:hover {
-                        background: hsl(178, 90%, 38%);
-                    }
                     background-repeat: no-repeat;
                     background-size: cover;
+                    // box-shadow: 3px 3px 10px #888888;
+                    &:hover {
+                        background: hsl(178, 90%, 38%);
+                        box-shadow: none;
+                    }
+
                 }
                 div {
                     overflow: hidden;
                     width:100%;
                     @media screen and (max-width:991px){
                         height:13vh;
+                        min-height:130px;
                     }
                     @media screen and (min-width:992px){
                         height:25vh;
+                        min-height: 210px;
                     }
-                    min-height:170px;
                     text-align: center;
                     background:grey;
                     filter: blur(0.5px);
@@ -139,11 +145,13 @@
             }
         }
     }
+
     .detail-view {
         width: 100%;
         display:block;
         padding: 5% 15%;
         .project-detail {
+            padding: 5%;
             font-size: 120%;
             @media screen and (max-width:991px){
                 font-size: 100%;

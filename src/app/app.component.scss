@@ -3,7 +3,10 @@
     margin:0px;
     padding:0px;
     width: 100vw;
-
+    @-webkit-keyframes slide {
+        from { background-position: 0 0; }
+        to { background-position: 1000px 0px; }
+    }
     .jumbotron{
         font-family: 'Montserrat', sans-serif;
         color: white;
@@ -11,11 +14,12 @@
         padding:0px;
         margin:0px;
         height:100vh;
-        min-height: 850px;
+        min-height: 860px; //https://www.designyourway.net/diverse/darkpat/wallpaper_800x600_773.jpg
         width:100vw;
-        background-color: rgb(128,128,128);
-        //background-image: linear-gradient(to top, rgb(0, 0, 0), rgba(0, 225, 255, 0.822));
-
+        background: rgb(128,128,128) url(http://s3.amazonaws.com/everystockphoto/fspid31/51/35/36/9/soft-teal-elementsweb-5135369-o.jpg) repeat 0 0;
+        -webkit-animation: slide 60s linear infinite;
+        
+        position: relative;
         -webkit-transition: transform 0.2s;
         -moz-transition: transform 0.2s;
         -o-transition:transform 0.2s;
@@ -27,7 +31,7 @@
             position: absolute;
             bottom: 0px;
             text-align: center;
-            
+            z-index: 100; 
             &:hover {
                 a{
                     color: rgb(0, 225, 255);
@@ -60,7 +64,7 @@
 
         .name {
             padding: 18% 0px; 
-
+            z-index: 100;
             h1 {
                 font-size: 500%;
             }
@@ -88,15 +92,18 @@
 
     .body {
         height:100vh;
-        min-height: 860px;
+        min-height: 875px;
         width: 100vw;
         margin: 0px;
         background: rgb(255, 255, 255);
         color: black;
         overflow: hidden;
+        z-index: 2;
     }
+    
 
     #projects, #contact{
         background-color: rgb(236, 236, 236);
     }
+
 }

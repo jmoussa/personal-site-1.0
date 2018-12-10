@@ -1,59 +1,98 @@
 .services-container {
     margin: 0px;
-    padding: 0px;
+    padding: 5% 10%; 
+    width: 100%;
+    height: 100vh;
+    min-height: 875px;
+    .services-header {
+        //margin: 0 15%;
+        //margin-top: 90px;
+        text-align: center;
+        width: 100%;
+        height: 10vh;
+        min-height: 90px;
+        display: block;
+        .bar {
+            margin: 1% auto;
+            background-color: black;
+            width: 50px;
+            height: 5%;
 
-    .p-none{
-        padding-right:0;
-        padding-left:0;
+        }
     }
-    .left{
-        float: left;
-        height: 100vh;
-        min-height: 850px;
-        width: 50%;
-        padding-top: 7%;
-        padding-left: 10%;
 
-        .services-list {
-            margin: 0px;
-            padding:0px;
-            list-style: none;
-            .service-item {
-                margin:0px;
-                padding:0px;
-                div {
-                    width: 100%;
-                    padding: 5%;
-                    -webkit-transition: transform 0.2s;
-                    -moz-transition: transform 0.2s;
-                    -o-transition: transform 0.2s;
-                    transition: transform 0.2s;
+    .services {
+        list-style: none;
+        height: 100%;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        .service {
+            display: flex;
+            @media screen and (max-width:991px){
+                height: auto;
+                // height: 180px;
+                margin-bottom: 3%; 
+            }
+            @media screen and (min-width:992px){
+                margin-bottom: 1%;
+                min-height: 15%;
+            }
+            
+            .image-container{
+                @media screen and (max-width:991px){
+                    display: none;
+                }
+                @media screen and (min-width:992px){
                     
-                    &:hover {
-                        h2{
-                            -webkit-transition: transform 0.2s;
-                            -moz-transition: transform 0.2s;
-                            -o-transition: transform 0.2s;
-                            transition: transform 0.2s;
-                            transform: translateX(5%);
-                        }
-                        background-color: #0abab5;
+                    float:left;
+                    width: 10%;
+                    height: 100%; 
+                    text-align:center;
+                    padding: 0;
+                    display: flex;
+                    margin: auto; 
+                    img {
+                        margin: auto;
+                        width: 75px;
+                        height: 75px;
                     }
+
                 }
             }
+
+            .content-container{
+                height: 100%;
+                float:right;
+                overflow: hidden;
+                @media screen and (max-width:991px){
+                    width: 100%;
+                    padding: 5%;
+                }
+                @media screen and (min-width:992px){
+                    width: 90%;
+                }
+                padding: 1.5%;
+                font-size: 80%;
+                color: black;
+                box-shadow: 1px 1px 3px #888888;
+                max-height: 100%;
+                h4 {
+                    text-decoration: underline;
+                }
+                div {
+                    padding:0.5%;
+                }
+            }
+            
+        }
+
+        #frontend, #database {
+            background: rgb(236,236,236);
+        }
+
+        #design, #backend {
+            background: #0abab0;
         }
     }
-    .right {
-        background-color: rgb(236, 236, 236);
-        float: right;
-        color: black;
-        height: 100vh;
-        width: 50%;
-        padding-top: 7%;
-        .service-details {
-            margin: 15% 15%;
-            padding: 0px;
-        }
-    }
-    
 }
