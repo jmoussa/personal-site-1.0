@@ -1,4 +1,4 @@
-import { Component, OnInit, AfterContentChecked } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { trigger, state, style, animate, stagger, query, transition } from '@angular/animations';
 import * as $ from 'jquery';
 
@@ -6,6 +6,7 @@ import * as $ from 'jquery';
   selector: 'app-bio',
   templateUrl: './bio.component.html',
   styleUrls: ['./bio.component.scss'],
+  encapsulation: ViewEncapsulation.Emulated,
   animations: [
     trigger('slide', [
       transition(':enter', [

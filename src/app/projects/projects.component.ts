@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import {trigger,
   state,
   style,
@@ -13,6 +13,7 @@ import * as $ from 'jquery';
   selector: 'app-projects',
   templateUrl: './projects.component.html',
   styleUrls: ['./projects.component.scss'],
+  encapsulation: ViewEncapsulation.Emulated,
   animations: [
     trigger('slideUp', [
       state('showDetails', style({

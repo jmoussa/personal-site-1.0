@@ -1,11 +1,12 @@
-import { Component, HostListener, Inject, AfterContentInit} from '@angular/core';
+import { Component, HostListener, Inject, AfterContentInit, ViewEncapsulation} from '@angular/core';
 import { DOCUMENT } from '@angular/common';
 import * as $ from 'jquery';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
+  encapsulation: ViewEncapsulation.Emulated
 })
 
 export class AppComponent implements AfterContentInit {
