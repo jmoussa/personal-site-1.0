@@ -5,6 +5,7 @@
     height: 100vh;
     min-height: 875px;
     .services-header {
+        transform: translateZ(0);
         //margin: 0 15%;
         //margin-top: 90px;
         text-align: center;
@@ -17,17 +18,18 @@
             background-color: black;
             width: 50px;
             height: 5%;
-
         }
     }
 
     .services {
+        transform: translateZ(0);
         list-style: none;
         height: 100%;
         width: 100%;
         margin: 0;
         padding: 0;
         .service {
+            transform: translateZ(0);
             display: flex;
             @media screen and (max-width:991px){
                 height: auto;
@@ -40,6 +42,7 @@
             }
             
             .image-container{
+                transform: translateZ(0);
                 @media screen and (max-width:991px){
                     display: none;
                 }
@@ -62,6 +65,7 @@
             }
 
             .content-container{
+                transform: translateZ(0);
                 height: 100%;
                 float:right;
                 overflow: hidden;

@@ -9,6 +9,7 @@
         to { background-position: 1000px 0px; }
     }
     .jumbotron{
+        transform: translateZ(0);
         font-family: 'Montserrat', sans-serif;
         color: white;
         text-align: center;
@@ -75,6 +76,7 @@
         }
         
         .fade-in {
+            transform: translateZ(0);
             opacity:0;  /* make things invisible upon start */
             -webkit-animation:fadeIn ease-in 1;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
             -moz-animation:fadeIn ease-in 1;

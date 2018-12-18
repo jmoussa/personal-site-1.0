@@ -40,6 +40,7 @@
             div{
                 height:100%;
                 list-style: none;
+                transform: translateZ(0);
                 #message{
                     background: url('../../assets/images/openssl.jpg'); 
                     background-repeat: no-repeat;
@@ -72,6 +73,7 @@
 
                 }
                 div {
+                    transform: translateZ(0);
                     overflow: hidden;
                     width:100%;
                     @media screen and (max-width:991px){
@@ -87,6 +89,7 @@
                     filter: blur(0.5px);
                     margin: 3px 0;
                     h3 {
+                        transform: translateZ(0);
                         overflow: hidden;
                         height: 50%;
                         margin-top: 10%;
@@ -99,6 +102,7 @@
                         }
                     }
                     span {
+                        transform: translateZ(0);
                         overflow: hidden;
                         height: 50%;
                         width: 100%;
@@ -109,6 +113,7 @@
                             height: 60%;
                         }
                         button {
+                            transform: translateZ(0);
                             border-radius: 0px;
                             margin: 3%;
                             &:hover{
@@ -147,10 +152,12 @@
     }
 
     .detail-view {
+        transform: translateZ(0);
         width: 100%;
         display:block;
         padding: 5% 15%;
         .project-detail {
+            transform: translateZ(0);
             background-color: white;
             box-shadow: 0px 5px #888888;
             padding: 4%;
