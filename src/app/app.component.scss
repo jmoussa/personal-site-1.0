@@ -3,6 +3,7 @@
     margin:0px;
     padding:0px;
     width: 100vw;
+    max-width: 100%;
     @-webkit-keyframes slide {
         from { background-position: 0 0; }
         to { background-position: 1000px 0px; }
@@ -16,6 +17,7 @@
         height:100vh;
         min-height: 860px; //https://www.designyourway.net/diverse/darkpat/wallpaper_800x600_773.jpg
         width:100vw;
+        max-width: 100%;
         background: rgb(128,128,128) url(http://s3.amazonaws.com/everystockphoto/fspid31/51/35/36/9/soft-teal-elementsweb-5135369-o.jpg) repeat 0 0;
         -webkit-animation: slide 60s linear infinite;
         position: relative;
@@ -93,6 +95,7 @@
         height:100vh;
         min-height: 875px;
         width: 100vw;
+        max-width: 100%;
         margin: 0px;
         background: rgb(255, 255, 255);
         color: black;
