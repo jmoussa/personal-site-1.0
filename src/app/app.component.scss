@@ -9,7 +9,7 @@
         to { background-position: 1000px 0px; }
     }
     .jumbotron{
-        transform: translateZ(0);
+        //transform: translateZ(0);
         font-family: 'Montserrat', sans-serif;
         color: white;
         text-align: center;
@@ -61,7 +61,7 @@
             .navbar {
                 background-color: black;
             }
-            z-index: 100;
+            z-index: 5000;
         }
 
         .name {
