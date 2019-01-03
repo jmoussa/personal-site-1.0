@@ -4,23 +4,24 @@
     padding:0px;
     width: 100vw;
     max-width: 100%;
+    /*
     @-webkit-keyframes slide {
         from { background-position: 0 0; }
         to { background-position: 1000px 0px; }
     }
+    */
     .jumbotron{
-        //transform: translateZ(0);
         font-family: 'Montserrat', sans-serif;
         color: white;
         text-align: center;
         padding:0px;
         margin:0px;
         height:100vh;
-        min-height: 860px; //https://www.designyourway.net/diverse/darkpat/wallpaper_800x600_773.jpg
+        min-height: 860px; 
         width:100vw;
         max-width: 100%;
-        background: rgb(128,128,128) url(http://s3.amazonaws.com/everystockphoto/fspid31/51/35/36/9/soft-teal-elementsweb-5135369-o.jpg) repeat 0 0;
-        -webkit-animation: slide 60s linear infinite;
+        background-color: rgb(50,173,170);
+        background-image: url('../assets/black-felt.png'); 
         position: relative;
         -webkit-transition: transform 0.2s;
         -moz-transition: transform 0.2s;
@@ -36,7 +37,8 @@
             z-index: 100; 
             &:hover {
                 a{
-                    color: rgb(0, 225, 255);
+                    color: black;
+                    //color: #00e1ff;
                 }
                 transform: scale(1.01);
             }
@@ -50,8 +52,10 @@
         
 
         .sticky {
-            background: black;
-            box-shadow: 0 3px 12px 0 rgba(0,0,0,.08);
+            background-color: rgb(50,173,170);
+            background-image: url('../assets/black-felt.png'); 
+            //background: black;
+            box-shadow: 3px 3px 12px 3px rgba(0,0,0,.1);
             position: fixed;
             top: 0;
             left: 0;
@@ -59,7 +63,8 @@
             min-height: 67px;
             width: 100%;
             .navbar {
-                background-color: black;
+                background-color: #037171;
+                //background-color: black;
             }
             z-index: 5000;
         }
