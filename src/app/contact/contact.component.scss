@@ -13,6 +13,7 @@
         height: 85%;
         display: block;
         width: 100%;
+        max-width: 1080px;
 
         .cform {
             @media screen and (max-height: 875px){
@@ -104,7 +105,7 @@
 
         .line {
             background-color: rgb(50,173,170);
-            width: 1.5%;
+            width: 3px;
             padding: 0px;
             margin-left: 49.25%;
             margin-right: 49.25%;
@@ -172,10 +173,7 @@
                     }
                             
                 }
-
-
             }
-
         }
     }
 }
