@@ -3,7 +3,7 @@
     padding: 0px;
     width: 100vw;
     height: 100vh;
-    min-height: 875px;
+    //min-height: 875px;
     position: relative;
 
     .main{
@@ -11,13 +11,10 @@
         margin: 6% 25%;
         color: black;
         height: 85%;
-        display: block;
+        display: inline;
         width: 100%;
 
         .cform {
-            @media screen and (max-height: 875px){
-                padding: 100% 0;
-            } 
             width: 100%;
             text-align: center;
             margin: 0px;
@@ -101,7 +98,7 @@
         position: fixed;
         bottom: 0px;
         height: 35vh;
-        max-height: 500px;
+        min-height: 300px;
 
         .line {
             background-color: rgb(50,173,170);
