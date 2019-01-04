@@ -48,7 +48,7 @@
                     // box-shadow: 3px 3px 10px #888888;
                     &:hover {
                         background: #0abab5;
-                        box-shadow: none;
+                        //box-shadow: none;
                     }
                 }
                 #expense{
@@ -57,8 +57,8 @@
                     background-size: cover;
                     // box-shadow: 3px 3px 10px #888888;
                     &:hover {
-                        background: rgb(10, 186, 181);
-                        box-shadow: none;
+                        background: #0abab5;
+                        //box-shadow: none;
                     }
                 }
                 #movie{
@@ -67,8 +67,8 @@
                     background-size: cover;
                     // box-shadow: 3px 3px 10px #888888;
                     &:hover {
-                        background: hsl(178, 90%, 38%);
-                        box-shadow: none;
+                        background: #09b8b2;
+                        //box-shadow: none;
                     }
 
                 }
@@ -86,7 +86,7 @@
                     }
                     text-align: center;
                     background:grey;
-                    filter: blur(0.5px);
+                    // filter: blur(0.5px);
                     margin: 3px 0;
                     h3 {
                         transform: translateZ(0);
@@ -128,13 +128,12 @@
                     @include hideTapHighlightColor();
                     @include hardwareAccel();
                     @include improveAntiAlias();
-                
+                    
+                    z-index: 50;
                     &:hover{
                         transform: scale(1.02);
-                        z-index: 50;
                         background: #0abab5;
                         opacity: 1;
-                        filter: blur(0);
                         h3 {
                             display:inline-block;
                             animation: 0.2s ease-out 0s 1 slideInFromTop;
