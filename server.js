@@ -4,6 +4,11 @@ const path = require('path');
 const forceSSL = require('force-ssl-heroku');
 const app = express();
 
+var http = require("http");
+setInterval(function() {
+    http.get("http://joseph-moussa.herokuapp.com");
+}, 300000); // every 5 minutes (300000)
+
 app.use(forceSSL);
 // Serve only the static files form the dist directory
 app.use(express.static(__dirname + '/dist/professionalSite'));
