@@ -33,7 +33,11 @@ export class ContactComponent implements OnInit {
   inView: boolean;
 
   resume() {
-    window.open('../../assets/JosephMoussa3.0.pdf' , '_blank');
+    try {
+      window.open('../../assets/JosephMoussa4.0.pdf' , '_blank');
+    } catch (err) {
+      window.open('../../assets/JosephMoussa3.0.pdf' , '_blank');
+    }
   }
 
   constructor() { }
