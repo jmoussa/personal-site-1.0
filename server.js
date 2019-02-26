@@ -7,7 +7,7 @@ const app = express();
 var http = require("http");
 setInterval(function() {
     http.get("http://joseph-moussa.herokuapp.com");
-}, 300000); // every 5 minutes (300000)
+}, (300000*12)); // every 1 hour 
 
 app.use(forceSSL);
 // Serve only the static files form the dist directory
