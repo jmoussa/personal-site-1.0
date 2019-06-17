@@ -67,6 +67,9 @@ export class ProjectsComponent implements OnInit {
     // console.log( s );
     window.open('https://github.com/jmoussa/' + s, '_blank');
   }
+  navigateToWebsite() {
+    window.open('http://www.expensereport.link/')
+  }
 
   constructor() { }
   isInViewport (el) {
