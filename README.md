@@ -16,7 +16,7 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 After building to deploy use forever.
 
-`forever run server.js` in project root directory.
+`forever start server.js` in project root directory.
 
 ## Running unit tests
 
