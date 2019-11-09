@@ -16,7 +16,7 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 After building to deploy use PM2 (Process Manager 2).
 
-pm2 restart ecosystem.config.js
+To run `pm2 restart ecosystem.config.js`
 
 ## Running unit tests
 
