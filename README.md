@@ -14,9 +14,9 @@ Run `ng generate component component-name` to generate a new component. You can 
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
-After building to deploy use forever.
+After building to deploy use PM2 (Process Manager 2).
 
-`forever start server.js` in project root directory.
+pm2 restart ecosystem.config.js
 
 ## Running unit tests
 
