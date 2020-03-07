@@ -58,7 +58,7 @@ export class ProjectsComponent implements OnInit {
 
   openssl: boolean;
   expense: boolean;
-  movie: boolean;
+  d3: boolean;
   selected: boolean;
   inView: boolean;
   projectView: boolean;
@@ -96,7 +96,7 @@ export class ProjectsComponent implements OnInit {
   ngOnInit() {
     this.openssl = false;
     this.expense = false;
-    this.movie = false;
+    this.d3 = false;
     this.selected = false;
     this.inView = false;
     this.projectView = false;
@@ -118,25 +118,25 @@ export class ProjectsComponent implements OnInit {
       case 'openssl': {
         this.openssl = true;
         this.expense = false;
-        this.movie = false;
+        this.d3 = false;
         break;
       }
       case 'expense': {
         this.openssl = false;
         this.expense = true;
-        this.movie = false;
+        this.d3 = false;
         break;
       }
-      case 'movie': {
+      case 'd3': {
         this.openssl = false;
         this.expense = false;
-        this.movie = true;
+        this.d3 = true;
         break;
       }
       default: {
         this.openssl = false;
         this.expense = false;
-        this.movie = false;
+        this.d3 = false;
         break;
       }
     }

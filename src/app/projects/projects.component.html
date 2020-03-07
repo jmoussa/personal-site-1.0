@@ -26,11 +26,11 @@
         </div>
       </div>
       <div class='cards col-lg-4 col-md-12 col-sm-12 col-12'>
-        <div id='movie'>
-          <h3>Movie Scraping API</h3>
+        <div id='d3'>
+          <h3>D3 Charts</h3>
           <span>  
-            <button (click)='showDetails("movie")' mat-button>Details</button>
-            <button (click)='navigateToGithub("movieScraper")' mat-button>Github</button>
+            <button (click)='showDetails("d3")' mat-button>Details</button>
+            <button (click)='navigateToGithub("d3_graphs")' mat-button>Github</button>
           </span>  
         </div>
       </div>
@@ -67,18 +67,16 @@
           <li>ExpressJS</li>
         </ul>
     </div>
-    <div @slide *ngIf='movie' class="project-detail" style='position:absolute; top:25%; left:15%; right:15%;'>
-        <h4>Movie Scraper</h4>  
+    <div @slide *ngIf='d3' class="project-detail" style='position:absolute; top:25%; left:15%; right:15%;'>
+        <h4>D3 Charts</h4>  
         <p>
-          Scrape theater, movie and time from IMDB using python BeautifulSoup4 library.<br>
-          Clean scraped data and use as REST API Endpoint.<br>
-          Initial GET request returns JSON array of all nearby movie theatres, the movies and their showtimes.
+          Simple Demo of D3's charting capabilities<br>
+          Comes with a custom formatted JSON file to input and output interactive graphs<br>
         </p>
         <h6>Technologies Used</h6>        
         <ul>
-          <li>Python</li>
-          <li>BeautifulSoup4</li>
-          <li>Flask</li>
+          <li>Javascript</li>
+          <li>D3</li>
         </ul>
     </div> 
   </div>
