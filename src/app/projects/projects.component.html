@@ -7,11 +7,11 @@
   <div class='project-container' [@slideUp]='selected ? "showDetails" : "hideDetails"'>
     <div @staggerGrow *ngIf='projectView' class='row'>
       <div class='cards col-lg-4 col-md-12 col-sm-12 col-12'>
-        <div id='message'>
-          <h3>CLI Message Board</h3>
+        <div id='stocks'>
+          <h3>Stocks Analyzer</h3>
           <span>  
-            <button (click)='showDetails("openssl")' mat-button>Details</button>
-            <button (click)='navigateToGithub("OpenSSLMessageBoard")' mat-button>Github</button>
+            <button (click)='showDetails("stocks")' mat-button>Details</button>
+            <button (click)='navigateToGithub("python_stonks")' mat-button>Github</button>
           </span>  
         </div>
       </div>
@@ -38,18 +38,18 @@
   </div>
 
   <div class='detail-view' style='position:relative;'>
-    <div @slide *ngIf='openssl' class="project-detail" style='position:absolute; top:25%; left:15%; right:15%;'>
-        <h4>OpenSSL Message Board</h4>  
+    <div @slide *ngIf='stocks' class="project-detail" style='position:absolute; top:25%; left:15%; right:15%;'>
+        <h4>Python Stock Market Analysis</h4>  
         <p>
-          Simple multithreaded client/server message board application with login.<br>
-          Passwords are salted and hashed in the passwords file.<br>
-          Currently runs as CLI app.<br> 
+          Basic S&amp;P 500 Analysis tool.<br>
+          Complete with scraper, local caching via pickle files, graphing and some machine learning prediction.<br>
+          Constant work in progress as I fine tune the classifiers and learn more
         </p>
         <h6>Technologies Used</h6>
         <ul>
           <li>Python</li>
-          <li>Sockets API</li>
-          <li>Passlib password hashing library</li>
+          <li>Pandas</li>
+          <li>SciKitLearn</li>
         </ul>
     </div>
     <div @slide *ngIf='expense' class="project-detail" style='position:absolute; top:25%; left:15%; right:15%;'> 

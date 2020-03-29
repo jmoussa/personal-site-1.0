@@ -56,7 +56,7 @@ import * as $ from 'jquery';
 export class ProjectsComponent implements OnInit {
   public val = '';
 
-  openssl: boolean;
+  stocks: boolean;
   expense: boolean;
   d3: boolean;
   selected: boolean;
@@ -94,7 +94,7 @@ export class ProjectsComponent implements OnInit {
     });
   }
   ngOnInit() {
-    this.openssl = false;
+    this.stocks = false;
     this.expense = false;
     this.d3 = false;
     this.selected = false;
@@ -115,26 +115,26 @@ export class ProjectsComponent implements OnInit {
   showDetails(choice: String) {
     this.selected = true;
     switch (choice) {
-      case 'openssl': {
-        this.openssl = true;
+      case 'stocks': {
+        this.stocks = true;
         this.expense = false;
         this.d3 = false;
         break;
       }
       case 'expense': {
-        this.openssl = false;
+        this.stocks = false;
         this.expense = true;
         this.d3 = false;
         break;
       }
       case 'd3': {
-        this.openssl = false;
+        this.stocks = false;
         this.expense = false;
         this.d3 = true;
         break;
       }
       default: {
-        this.openssl = false;
+        this.stocks = false;
         this.expense = false;
         this.d3 = false;
         break;
