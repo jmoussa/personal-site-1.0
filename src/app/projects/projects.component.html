@@ -16,12 +16,12 @@
         </div>
       </div>
       <div class='cards col-lg-4 col-md-12 col-sm-12 col-12'>
-        <div id='expense'>
-          <h3>Expense Report App</h3>
+        <div id='chat_app'>
+          <h3>Chat Room App</h3>
           <span>  
-            <button (click)='showDetails("expense")' mat-button>Details</button>
-            <button (click)='navigateToGithub("expenseReportApp")' mat-button>Github</button>
-            <button (click)='navigateToWebsite()' mat-button>Website</button>
+            <button (click)='showDetails("chat_app")' mat-button>Details</button>
+            <button (click)='navigateToGithub("python_websockets_chatroom_app")' mat-button>Github</button>
+            <!--<button (click)='navigateToWebsite()' mat-button>Website</button>-->
           </span>  
         </div>
       </div>
@@ -58,19 +58,20 @@
           <li>SciKitLearn</li>
         </ul>
     </div>
-    <div @slide *ngIf='expense' class="project-detail" style='position:absolute; top:25%; left:15%; right:15%;'> 
-        <h4>Expense Report Web App</h4>  
+    <div @slide *ngIf='chat_app' class="project-detail" style='position:absolute; top:25%; left:15%; right:15%;'> 
+        <h4>Chat Room Web App</h4>  
         <p>
-          Personal project using React.js, Node/Express and a MySQL database to hold an individual's purchase/expense history across stores.<br>
-          Good practice for building a front-end with React, and communicating with a backend and database.<br>
-          <a href="http://www.expensereport.link/">Expense Report App</a>
+          Personal project using Python FastAPI, WebSockets and a MongoDB database.<br>
+          Essentially a quick chat room type app. 
+          WebSockets maintains instant messaging chat and MongoDB holds the user's personal info and chat logs.<br>
+          <a href="http://www.expensereport.link/">Chat Room Web App</a>
         </p>
         <h6>Technologies Used</h6>
         <ul>
-          <li>JavaScript</li>
-          <li>React</li>
-          <li>Node.js</li>
-          <li>ExpressJS</li>
+          <li>Python</li>
+          <li>FastAPI</li>
+          <li>MongoDB</li>
+          <li>WebSockets</li>
         </ul>
     </div>
     <div @slide *ngIf='d3' class="project-detail" style='position:absolute; top:25%; left:15%; right:15%;'>

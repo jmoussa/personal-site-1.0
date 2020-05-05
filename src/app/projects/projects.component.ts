@@ -57,7 +57,7 @@ export class ProjectsComponent implements OnInit {
   public val = '';
 
   stocks: boolean;
-  expense: boolean;
+  chat_app: boolean;
   d3: boolean;
   selected: boolean;
   inView: boolean;
@@ -95,7 +95,7 @@ export class ProjectsComponent implements OnInit {
   }
   ngOnInit() {
     this.stocks = false;
-    this.expense = false;
+    this.chat_app= false;
     this.d3 = false;
     this.selected = false;
     this.inView = false;
@@ -117,25 +117,25 @@ export class ProjectsComponent implements OnInit {
     switch (choice) {
       case 'stocks': {
         this.stocks = true;
-        this.expense = false;
+        this.chat_app= false;
         this.d3 = false;
         break;
       }
-      case 'expense': {
+      case 'chat_app': {
         this.stocks = false;
-        this.expense = true;
+        this.chat_app= true;
         this.d3 = false;
         break;
       }
       case 'd3': {
         this.stocks = false;
-        this.expense = false;
+        this.chat_app= false;
         this.d3 = true;
         break;
       }
       default: {
         this.stocks = false;
-        this.expense = false;
+        this.chat_app= false;
         this.d3 = false;
         break;
       }
