@@ -5,20 +5,16 @@
   </div>
   <div class='container d-none d-md-inline-block'>
     <ul @staggerGrow *ngIf='iconView' class='row'>
-      <li class='d-none d-sm-none d-md-inline-block col-lg-3 col-md-6'>
-				<img src='../../assets/images/tailored.svg' alt='tailored' width="175px" height="125px"/>
-				<h5>Tailored</h5>
+      <li class='d-none d-sm-none d-md-inline-block col-md-4'>
+	    <img src='../../assets/images/tailored.svg' alt='tailored' width="100%" height="125px"/>
+	    <h5>Tailored</h5>
       </li>
-      <li class='d-none d-sm-none d-md-inline-block col-lg-3 col-md-6'>
-				<img src='../../assets/images/dynamic.svg' alt='dynamic' width="175px" height="125px"/>
+      <li class='d-none d-sm-none d-md-inline-block col-md-4'>
+	    <img src='../../assets/images/dynamic.svg' alt='dynamic' width="100%" height="125px"/>
         <h5>Dynamic</h5>
       </li>
-      <!--<li class='d-none d-sm-none d-md-inline-block col-lg-3 col-md-6'>-->
-				<!--<img src='../../assets/images/pixelperfect.svg' alt='pixel perfect' width="175px" height="125px"/>-->
-        <!--<h5>Pixel Perfect</h5>-->
-      <!--</li>-->
-      <li class='d-none d-sm-none d-md-inline-block col-lg-3 col-md-6'>
-				<img src='../../assets/images/user.svg' alt='user driven' width="175px" height="125px"/>
+      <li class='d-none d-sm-none d-md-inline-block col-md-4'>
+		<img src='../../assets/images/user.svg' alt='user driven' width="100%" height="125px"/>
         <h5>User Driven</h5>
       </li>
     </ul>
@@ -31,12 +27,56 @@
 			<div>
 				<h2>About Me</h2>
                 Hey there! 
-                I'm currently a Backend Software Engineer at <a href='https://thewaltdisneycompany.com/'>The Walt Disney Company</a>, with over 3 years of experience in software development.
-                I also have experience building full stack web applications in addition to data pipelining.
-                In my free time I enjoy reading about and picking up some of the latest trends in software development, watching/playing sports, motorcycling and just getting out of the house.
+                I'm currently a Software Engineer at <a href='https://thewaltdisneycompany.com/'>The Walt Disney Company</a>, with over 3 years of experience in software development.
+                Typically I enjoy working in the backend, setting up APIs, data pipelines and automating processes, but I am able to work on the front end as well. 
+                I have experience building full-stack web applications in addition to data pipelining.
+                In my free time I enjoy reading about and picking up some of the latest trends in software development, watching/playing sports, and motorcycling.
 			</div>
 		</div>
+        <div class="chart-container col-md-6 col-sm-12 col-12">
+			<div class="chart chart--dev">
+				<ul @staggerSlide *ngIf='graphView' class="chart--horiz">
+					<li class="chart__bar">
+						<div class='chart_percent' style="width: 75%;">
+							<div class="label__holder">
+                                Front-End Development 
+							</div>
+						</div>	
+					</li>
+                    <li class="chart__bar">
+						<div class='chart_percent' style="width: 95%;">
+							<div class="label__holder">
+								Back-End Development	
+							</div>
+						</div>
+					</li>
+					<li class="chart__bar">
+						<div class='chart_percent' style="width: 85%;">
+							<div class="label__holder">
+							    Database Design	
+							</div>
+						</div>
+                    </li>
+                    <li class="chart__bar">
+						<div class='chart_percent' style="width: 75%;">
+							<div class="label__holder">
+							    Platform Architecture	
+							</div>
+						</div>
+                    </li>
+                    <li class="chart__bar">
+						<div class='chart_percent' style="width: 95%;">
+							<div class="label__holder">
+							    Automation/Pipelining
+							</div>
+						</div>
+					</li>
+                </ul>
+            </div>
+        </div>
 
+
+        <!--
 		<div class="chart-container col-md-6 col-sm-12 col-12">
 			<div class="chart chart--dev">
 				<ul @staggerSlide *ngIf='graphView' class="chart--horiz">
@@ -112,6 +152,7 @@
 					</li>
                 </ul>
 			</div>
-		</div>
+        </div>
+        -->
 	</div>
 </div>
