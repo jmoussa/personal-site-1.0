@@ -1,0 +1,60 @@
+<PAMDataset>
+  <Metadata domain="IMAGE_STRUCTURE">
+    <MDI key="INTERLEAVE">PIXEL</MDI>
+  </Metadata>
+  <Metadata>
+    <MDI key="EXIF_ApertureValue">(2.27501)</MDI>
+    <MDI key="EXIF_BrightnessValue">(7.19283)</MDI>
+    <MDI key="EXIF_ColorSpace">65535</MDI>
+    <MDI key="EXIF_ComponentsConfiguration">0x1 0x2 0x3 00</MDI>
+    <MDI key="EXIF_CustomRendered">8</MDI>
+    <MDI key="EXIF_DateTime">2020:08:14 16:23:28</MDI>
+    <MDI key="EXIF_DateTimeDigitized">2020:08:14 16:23:28</MDI>
+    <MDI key="EXIF_DateTimeOriginal">2020:08:14 16:23:28</MDI>
+    <MDI key="EXIF_ExifVersion">0231</MDI>
+    <MDI key="EXIF_ExposureBiasValue">(0)</MDI>
+    <MDI key="EXIF_ExposureMode">0</MDI>
+    <MDI key="EXIF_ExposureProgram">2</MDI>
+    <MDI key="EXIF_ExposureTime">(0.008)</MDI>
+    <MDI key="EXIF_Flash">16</MDI>
+    <MDI key="EXIF_FlashpixVersion">0100</MDI>
+    <MDI key="EXIF_FNumber">(2.2)</MDI>
+    <MDI key="EXIF_FocalLength">(2.71)</MDI>
+    <MDI key="EXIF_FocalLengthIn35mmFilm">30</MDI>
+    <MDI key="EXIF_ISOSpeedRatings">25</MDI>
+    <MDI key="EXIF_Make">Apple</MDI>
+    <MDI key="EXIF_MakerNote">Apple iOS</MDI>
+    <MDI key="EXIF_MeteringMode">5</MDI>
+    <MDI key="EXIF_Model">iPhone 11 Pro</MDI>
+    <MDI key="EXIF_Orientation">1</MDI>
+    <MDI key="EXIF_PixelXDimension">3088</MDI>
+    <MDI key="EXIF_PixelYDimension">2316</MDI>
+    <MDI key="EXIF_ResolutionUnit">2</MDI>
+    <MDI key="EXIF_SceneCaptureType">0</MDI>
+    <MDI key="EXIF_SceneType">0x1</MDI>
+    <MDI key="EXIF_SensingMethod">2</MDI>
+    <MDI key="EXIF_ShutterSpeedValue">(6.96849)</MDI>
+    <MDI key="EXIF_Software">14.0</MDI>
+    <MDI key="EXIF_SubSecTime_Digitized">867</MDI>
+    <MDI key="EXIF_SubSecTime_Original">867</MDI>
+    <MDI key="EXIF_WhiteBalance">0</MDI>
+    <MDI key="EXIF_XResolution">(72)</MDI>
+    <MDI key="EXIF_YCbCrPositioning">1</MDI>
+    <MDI key="EXIF_YResolution">(72)</MDI>
+  </Metadata>
+  <PAMRasterBand band="1">
+    <Metadata domain="IMAGE_STRUCTURE">
+      <MDI key="COMPRESSION">JPEG2000</MDI>
+    </Metadata>
+  </PAMRasterBand>
+  <PAMRasterBand band="2">
+    <Metadata domain="IMAGE_STRUCTURE">
+      <MDI key="COMPRESSION">JPEG2000</MDI>
+    </Metadata>
+  </PAMRasterBand>
+  <PAMRasterBand band="3">
+    <Metadata domain="IMAGE_STRUCTURE">
+      <MDI key="COMPRESSION">JPEG2000</MDI>
+    </Metadata>
+  </PAMRasterBand>
+</PAMDataset>
