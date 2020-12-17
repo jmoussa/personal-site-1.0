@@ -1,11 +1,12 @@
-//Install express server
+const compression = require('compression')
 const express = require('express');
 const path = require('path');
 const app = express();
 
 var http = require("http");
 
-// Serve only the static files form the dist directory
+app.use(compression())
+
 app.use(express.static(__dirname + '/dist/professionalSite'));
 
 app.get('*', function(req,res) {
