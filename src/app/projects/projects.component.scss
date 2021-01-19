@@ -1,172 +1,191 @@
 @mixin hideTapHighlightColor() {
-	//Prevent highlight colour when element is tapped
-	-webkit-tap-highlight-color: rgba(0,0,0,0);
+  //Prevent highlight colour when element is tapped
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 @mixin hardwareAccel() {
-	//Improve performance on mobile/tablet devices
-	transform: translateZ(0);
+  //Improve performance on mobile/tablet devices
+  transform: translateZ(0);
 }
 
 @mixin improveAntiAlias() {
-	//Improve aliasing on mobile/tablet devices
-    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  //Improve aliasing on mobile/tablet devices
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
 }
 
 .projects-container {
-    margin: 0 10%;
-    padding: 6% 0;
-    .project-header {
-        text-align: center;
-        width: 100%;
-        height: 10vh;
-        min-height: 90px;
-        display: block;
-        .bar {
-            margin: 1% auto;
-            background-color: black;
-            width: 50px;
-            height: 5%;
-        }
+  margin: 0 10%;
+  padding: 6% 0;
+  .project-header {
+    text-align: center;
+    width: 100%;
+    height: 10vh;
+    min-height: 90px;
+    display: block;
+    .bar {
+      margin: 1% auto;
+      background-color: black;
+      width: 50px;
+      height: 5%;
     }
-    .project-container {
-        width: 100%;
-        padding-top: 10%;
-        .row {
-            width: 100%;
-            text-align: center;
-            height:100%;
-            padding: 0px;
-            margin: 0px;
-            div{
-                height:100%;
-                list-style: none;
-                transform: translateZ(0);
-                #stocks{
-                    background: url('../../assets/images/stocks.svg'); 
-                    background-repeat: no-repeat;
-                    background-size: cover;
-                    box-shadow: 3px 3px 10px #888888;
-                    &:hover {
-                        background: #0abab5;
-                        box-shadow: none;
-                    }
-                }
-                #chat_app{
-                    background: url('../../assets/images/chat_app.svg');
-                    background-repeat: no-repeat;
-                    background-size: cover;
-                    box-shadow: 3px 3px 10px #888888;
-                    &:hover {
-                        background: #0abab5;
-                        box-shadow: none;
-                    }
-                }
-                #d3{
-                    background: url('../../assets/images/d3.jpg');
-                    background-repeat: no-repeat;
-                    background-size: cover;
-                    box-shadow: 3px 3px 10px #888888;
-                    &:hover {
-                        background: #09b8b2;
-                        box-shadow: none;
-                    }
-
-                }
-                div {
-                    transform: translateZ(0);
-                    overflow: hidden;
-                    width:100%;
-                    @media screen and (max-width:991px){
-                        height:13vh;
-                        min-height:130px;
-                    }
-                    @media screen and (min-width:992px){
-                        height:25vh;
-                        min-height: 210px;
-                    }
-                    text-align: center;
-                    background:grey;
-                    // filter: blur(0.5px);
-                    margin: 3px 0;
-                    h3 {
-                        transform: translateZ(0);
-                        overflow: hidden;
-                        height: 40%;
-                        margin-top: 10%;
-                        text-align: center;
-                        display: none;
-                        transition: translateX(-200%);
-                        @media screen and (max-width:991px){
-                            margin: 0px;
-                            padding-top: 5%;
-                        }
-                    }
-                    span {
-                        transform: translateZ(0);
-                        overflow: hidden;
-                        height: 50%;
-                        width: 100%;
-                        transition: translateX(-200%);
-                        display: none;
-                        @media screen and (max-width:991px){
-                            margin-bottom: 50%;
-                            height: 60%;
-                        }
-                        button {
-                            transform: translateZ(0);
-                            border-radius: 0px;
-                            margin: 3%;
-                            &:hover{
-                                background-color: #0abab5;
-                            }
-                        }
-                    }
-
-                    transition-duration: 250ms;
-                    transition-property: display, transform, opacity, background-color;
-                
-                    @include hideTapHighlightColor();
-                    @include hardwareAccel();
-                    @include improveAntiAlias();
-                    
-                    z-index: 50;
-                    &:hover{
-                        transform: scale(1.02);
-                        background: #0abab5;
-                        opacity: 1;
-                        h3 {
-                            display:inline-block;
-                            animation: 0.2s ease-out 0s 1 slideInFromTop;
-                            opacity: 1;
-                        }
-                        span {
-                            opacity: 1;
-                            display:inline-block;
-                            animation: 0.2s ease-out 0s 1 slideInFromBottom;
-                        }
-                    }
-                }
-            }
-        }
-    }
-
-    .detail-view {
+  }
+  .project-container {
+    width: 100%;
+    padding-top: 10%;
+    .row {
+      width: 100%;
+      text-align: center;
+      height: 100%;
+      padding: 0px;
+      margin: 0px;
+      div {
+        height: 100%;
+        list-style: none;
         transform: translateZ(0);
-        width: 100%;
-        display:block;
-        padding: 5% 15%;
-        .project-detail {
-            transform: translateZ(0);
-            background-color: white;
-            box-shadow: 0px 5px #888888;
-            padding: 4%;
-            font-size: 120%;
-            margin-left: -12%;
-            margin-right: -12%;
-            @media screen and (max-width:991px){
-                font-size: 100%;
-                box-shadow: none;
-            }
+        #stocks {
+          background: url("../../assets/images/stocks.webp");
+          background-repeat: no-repeat;
+          background-size: cover;
+          box-shadow: 3px 3px 10px #888888;
+          &:hover {
+            background: rgba(9, 184, 178, 0.8);
+            box-shadow: none;
+          }
         }
+        #chat_app {
+          background: url("../../assets/images/chat_app.webp");
+          background-repeat: no-repeat;
+          background-size: cover;
+          box-shadow: 3px 3px 10px #888888;
+          &:hover {
+            background: rgba(9, 184, 178, 0.8);
+            box-shadow: none;
+          }
+        }
+        #d3 {
+          background: url("../../assets/images/d3.webp");
+          background-repeat: no-repeat;
+          background-size: cover;
+          box-shadow: 3px 3px 10px #888888;
+          &:hover {
+            background: rgba(9, 184, 178, 0.8);
+            box-shadow: none;
+          }
+        }
+        #luxor {
+          background: url("../../assets/images/luxor.webp");
+          background-repeat: no-repeat;
+          background-size: cover;
+          box-shadow: 3px 3px 10px #888888;
+          &:hover {
+            background: rgba(9, 184, 178, 0.8);
+            box-shadow: none;
+          }
+        }
+        #spotify {
+          background: url("../../assets/images/spotify.webp");
+          background-repeat: no-repeat;
+          background-size: cover;
+          box-shadow: 3px 3px 10px #888888;
+          &:hover {
+            background: rgba(9, 184, 178, 0.8);
+            box-shadow: none;
+          }
+        }
+        div {
+          transform: translateZ(0);
+          overflow: hidden;
+          width: 100%;
+          @media screen and (max-width: 991px) {
+            height: 13vh;
+            min-height: 130px;
+          }
+          @media screen and (min-width: 992px) {
+            height: 25vh;
+            min-height: 210px;
+          }
+          text-align: center;
+          background: grey;
+          // filter: blur(0.5px);
+          margin: 3px 0;
+          h3 {
+            transform: translateZ(0);
+            overflow: hidden;
+            height: 40%;
+            margin-top: 10%;
+            text-align: center;
+            display: none;
+            transition: translateX(-200%);
+            @media screen and (max-width: 991px) {
+              margin: 0px;
+              padding-top: 5%;
+            }
+          }
+          span {
+            transform: translateZ(0);
+            overflow: hidden;
+            height: 50%;
+            width: 100%;
+            transition: translateX(-200%);
+            display: none;
+            @media screen and (max-width: 991px) {
+              margin-bottom: 50%;
+              height: 60%;
+            }
+            button {
+              transform: translateZ(0);
+              border-radius: 0px;
+              margin: 3%;
+              &:hover {
+                background-color: #0abab5;
+              }
+            }
+          }
+
+          transition-duration: 250ms;
+          transition-property: display, transform, opacity, background-color;
+
+          @include hideTapHighlightColor();
+          @include hardwareAccel();
+          @include improveAntiAlias();
+
+          z-index: 50;
+          &:hover {
+            transform: scale(1.02);
+            background: #0abab5;
+            opacity: 1;
+            h3 {
+              display: inline-block;
+              animation: 0.2s ease-out 0s 1 slideInFromTop;
+              opacity: 1;
+            }
+            span {
+              opacity: 1;
+              display: inline-block;
+              animation: 0.2s ease-out 0s 1 slideInFromBottom;
+            }
+          }
+        }
+      }
     }
+  }
+
+  .detail-view {
+    transform: translateZ(0);
+    width: 100%;
+    display: block;
+    padding: 5% 15%;
+    .project-detail {
+      transform: translateZ(0);
+      background-color: white;
+      box-shadow: 0px 5px #888888;
+      padding: 4%;
+      font-size: 120%;
+      margin-left: -12%;
+      margin-right: -12%;
+      @media screen and (max-width: 991px) {
+        font-size: 100%;
+        box-shadow: none;
+      }
+    }
+  }
 }
