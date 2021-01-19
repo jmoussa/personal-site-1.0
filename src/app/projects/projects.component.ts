@@ -23,19 +23,19 @@ import * as $ from "jquery";
           paddingTop: "0",
         })
       ),
-      transition("* => showDetails", [animate("500ms ease")]),
+      transition("* => showDetails", [animate("300ms ease")]),
     ]),
     trigger("slide", [
       transition(":enter", [
         style({ opacity: 0, transform: "translateX(-200%)" }),
         animate(
-          "500ms ease-out",
+          "300ms ease-out",
           style({ opacity: "1", transform: "translateX(0)" })
         ),
       ]),
       transition(":leave", [
         animate(
-          "500ms ease-out",
+          "300ms ease-out",
           style({ opacity: "0", transform: "translateX(200%)" })
         ),
       ]),
@@ -44,13 +44,13 @@ import * as $ from "jquery";
       transition(":enter", [
         style({ opacity: 0, transform: "translateX(200%)" }),
         animate(
-          "500ms ease-out",
+          "300ms ease-out",
           style({ opacity: "1", transform: "translateX(0)" })
         ),
       ]),
       transition(":leave", [
         animate(
-          "500ms ease-out",
+          "300ms ease-out",
           style({ opacity: "0", transform: "translateX(-200%)" })
         ),
       ]),
