@@ -91,6 +91,16 @@
             box-shadow: none;
           }
         }
+        #blackjack {
+          background: url("../../assets/images/blackjack.webp");
+          background-repeat: no-repeat;
+          background-size: cover;
+          box-shadow: 3px 3px 10px #888888;
+          &:hover {
+            background: rgba(9, 184, 178, 0.8);
+            box-shadow: none;
+          }
+        }
         div {
           transform: translateZ(0);
           overflow: hidden;

@@ -78,6 +78,7 @@ export class ProjectsComponent implements OnInit {
   d3: boolean;
   luxor: boolean;
   spotify: boolean;
+  blackjack: boolean;
   selected: boolean;
   inView: boolean;
   projectView: boolean;
@@ -150,6 +151,7 @@ export class ProjectsComponent implements OnInit {
         this.d3 = false;
         this.luxor = false;
         this.spotify = false;
+        this.blackjack = false;
         break;
       }
       case "chat_app": {
@@ -158,6 +160,7 @@ export class ProjectsComponent implements OnInit {
         this.d3 = false;
         this.luxor = false;
         this.spotify = false;
+        this.blackjack = false;
         break;
       }
       case "d3": {
@@ -166,6 +169,7 @@ export class ProjectsComponent implements OnInit {
         this.d3 = true;
         this.luxor = false;
         this.spotify = false;
+        this.blackjack = false;
         break;
       }
       case "luxor": {
@@ -174,6 +178,7 @@ export class ProjectsComponent implements OnInit {
         this.d3 = false;
         this.luxor = true;
         this.spotify = false;
+        this.blackjack = false;
         break;
       }
       case "spotify": {
@@ -182,6 +187,16 @@ export class ProjectsComponent implements OnInit {
         this.d3 = false;
         this.luxor = false;
         this.spotify = true;
+        this.blackjack = false;
+        break;
+      }
+      case "blackjack": {
+        this.stocks = false;
+        this.chat_app = false;
+        this.d3 = false;
+        this.luxor = false;
+        this.spotify = false;
+        this.blackjack = true;
         break;
       }
       default: {
@@ -190,6 +205,7 @@ export class ProjectsComponent implements OnInit {
         this.d3 = false;
         this.luxor = false;
         this.spotify = false;
+        this.blackjack = false;
         break;
       }
     }

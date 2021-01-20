@@ -73,6 +73,19 @@
           </span>
         </div>
       </div>
+      <div class="cards col-lg-4 col-md-12 col-sm-12 col-12">
+        <div id="blackjack">
+          <h3>Command Line Blackjack</h3>
+          <span>
+            <button (click)="showDetails('blackjack')" mat-button>
+              Details
+            </button>
+            <button (click)="navigateToGithub('cli_blackjack')" mat-button>
+              Github
+            </button>
+          </span>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -177,6 +190,23 @@
         <li>Spotify API</li>
         <li>Python</li>
         <li>Matplotlib</li>
+      </ul>
+    </div>
+    <div
+      @slide
+      *ngIf="blackjack"
+      class="project-detail"
+      style="position: absolute; top: 25%; left: 15%; right: 15%"
+    >
+      <h4>Command Line Blackjack</h4>
+      <p>
+        Simple blackjack game hacked together to play in the terminal or shell.
+        Used to get familiar with object oriented Python.
+        <br />
+      </p>
+      <h6>Technologies Used</h6>
+      <ul>
+        <li>Python</li>
       </ul>
     </div>
   </div>
