@@ -1,176 +1,173 @@
 .contact-container {
-    margin: 0px;
-    padding: 0px;
-    width: 100vw;
-    height: 100vh;
-    //min-height: 875px;
-    position: relative;
+  margin: 0px;
+  padding: 0px;
+  width: 100vw;
+  height: 100vh;
+  //min-height: 875px;
+  position: relative;
 
-    .main{
-        padding: 0;
-        margin: 6% 25%;
-        color: black;
-        height: 85%;
-        display: inline;
+  .main {
+    padding: 0;
+    margin: 6% 25%;
+    color: black;
+    height: 85%;
+    display: inline;
+    width: 100%;
+
+    .cform {
+      width: 100%;
+      text-align: center;
+      margin: 0px;
+      padding: 0px;
+      .contact-header {
+        text-align: center;
         width: 100%;
+        height: 10vh;
+        margin-bottom: 3vh;
+        display: block;
+        .bar {
+          margin: 1% auto;
+          background-color: black;
+          width: 50px;
+          height: 5%;
+        }
+      }
 
-        .cform {
-            width: 100%;
-            text-align: center;
+      .contact-statement {
+        padding: 3% 0;
+        h6 {
+          padding: 1% 15%;
+        }
+      }
+
+      .contact-button {
+        margin: 10% 0;
+
+        a {
+          text-decoration: none;
+          color: black;
+          padding: 2% 5%;
+          border: 2px solid #0abab5;
+
+          &:hover {
+            background-color: #0abab5;
+          }
+        }
+      }
+
+      .form-group {
+        button {
+          border-radius: 0px;
+          &:hover {
+            background-color: #0abab5;
+          }
+        }
+      }
+    }
+  }
+
+  .contact-footer {
+    width: 100%;
+    text-align: center;
+    background-color: rgb(50, 173, 170);
+    background-image: url("../../assets/black-felt.png");
+    height: 75px;
+    margin: auto;
+    padding: 0;
+    display: flex;
+    position: absolute;
+    bottom: 0px;
+    div {
+      display: flex;
+      margin: auto;
+    }
+  }
+
+  .footer {
+    display: block;
+    @media screen and (max-width: 760px) {
+      width: 10%;
+    }
+    @media screen and (min-width: 761px) {
+      width: 7.5%;
+    }
+
+    text-align: center;
+    position: fixed;
+    bottom: 0px;
+    height: 35vh;
+    min-height: 300px;
+
+    .line {
+      background-color: rgb(50, 173, 170);
+      background-image: url("../../assets/black-felt.png");
+      width: 3px;
+      padding: 0px;
+      margin-left: 49.25%;
+      margin-right: 49.25%;
+      margin-top: 15%;
+      height: 100%;
+    }
+    .links {
+      margin: 0;
+      display: block;
+      width: 100%;
+      text-align: center;
+      div {
+        margin: auto;
+        margin-top: 10%;
+        width: 100%;
+        max-width: 100%;
+
+        padding: 1%;
+
+        height: auto;
+        display: block;
+        text-align: center;
+
+        a {
+          padding: 0;
+          margin: auto;
+          position: relative;
+          text-decoration: none;
+          color: black;
+          .label {
             margin: 0px;
             padding: 0px;
-            .contact-header {
-                text-align: center;
-                width: 100%;
-                height: 10vh;
-                margin-bottom: 3vh;
-                display: block;
-                .bar {
-                    margin: 1% auto;
-                    background-color: black;
-                    width: 50px;
-                    height: 5%;
+            width: 0px;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            left: 0px;
+            opacity: 0;
+            text-decoration: none;
+            text-align: left;
+          }
 
-                }
-            }
-
-            .contact-statement {
-                padding: 3% 0;
-                h6 {
-                    padding: 1% 15%;
-                }
-            }
-
-            .contact-button{
-                margin: 10% 0;
-
-                a{
-                    text-decoration: none;
-                    color: black;
-                    padding: 2% 5%;
-                    border: 2px solid #0abab5;
-
-                    &:hover {
-                        background-color: #0abab5;
-                    }
-                }
-            }
-
-            .form-group{
-                button {
-                    border-radius: 0px;
-                    &:hover{
-                        background-color: #0abab5;
-                    }
-                }
-            }
-        }
-    }
-
-    .contact-footer {
-        width: 100%;
-        text-align: center;
-        background-color: rgb(50,173,170);
-        height: 75px;
-        margin: auto;
-        padding: 0;
-        display:flex;
-        position: absolute;
-        bottom: 0px;
-        div{
-            display: flex;
-            margin: auto;
-        }
-    }
-
-
-
-    .footer {
-        display: block;
-         @media screen and (max-width: 760px){
-            width: 10%;
-        }
-        @media screen and (min-width: 761px){
-            width: 7.5%;
-        }
-
-        text-align: center;
-        position: fixed;
-        bottom: 0px;
-        height: 35vh;
-        min-height: 300px;
-
-        .line {
-            background-color: rgb(50,173,170);
-            width: 3px;
-            padding: 0px;
-            margin-left: 49.25%;
-            margin-right: 49.25%;
-            margin-top: 15%;
-            height: 100%;
-        }
-        .links {
+          img {
+            padding: 0;
             margin: 0;
-            display: block;
-            width: 100%;
-            text-align: center;
-            div {
-                margin: auto;
-                margin-top: 10%;
-                width: 100%;
-                max-width: 100%;
-
-                padding: 1%;
-                
-                height: auto;
-                display: block;
-                text-align:center;
-                
-                a {
-                    padding: 0;
-                    margin: auto;
-                    position: relative;
-                    text-decoration: none;
-                    color: black; 
-                    .label {
-                        margin: 0px;
-                        padding: 0px;
-                        width: 0px;
-                        position:absolute;
-                        right:0;
-                        bottom:0;
-                        left:0px;
-                        opacity:0;
-                        text-decoration: none;
-                        text-align: left;
-                    }
-
-                    img{
-                        padding: 0;
-                        margin: 0;
-                        width: 25px;
-                        height: 25px;
-                        transition-duration: 250ms;
-                        transition-property: transform;
-                    }
-
-                }
-
-                &:hover{
-                    transform: scale(1.20);
-                    a{
-                        .label {
-                            -webkit-transition: 0.2s ease-out;
-                            -moz-transition: 0.2s ease-out;
-                            -o-transition: 0.2s ease-out;
-                            transition: 0.2s ease-out;
-                            left: 30px;
-                            opacity: 1;
-                        }
-                    }
-                            
-                }
-            }
+            width: 25px;
+            height: 25px;
+            transition-duration: 250ms;
+            transition-property: transform;
+          }
         }
+
+        &:hover {
+          transform: scale(1.2);
+          a {
+            .label {
+              -webkit-transition: 0.2s ease-out;
+              -moz-transition: 0.2s ease-out;
+              -o-transition: 0.2s ease-out;
+              transition: 0.2s ease-out;
+              left: 30px;
+              opacity: 1;
+            }
+          }
+        }
+      }
     }
+  }
 }
